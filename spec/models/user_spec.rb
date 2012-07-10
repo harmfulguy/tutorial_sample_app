@@ -9,6 +9,12 @@
 #  updated_at      :datetime        not null
 #  password_digest :string(255)
 #  remember_token  :string(255)
+#  admin           :boolean         default(FALSE)
+#
+# Indexes
+#
+#  index_users_on_remember_token  (remember_token)
+#  index_users_on_email           (email) UNIQUE
 #
 
 require 'spec_helper'
